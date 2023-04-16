@@ -1,6 +1,7 @@
 "use client"
 
 import {useState} from "react"
+import Day from "../components/Day.js"
 
 function HomePage() {
   //worker name state, local host can be used or a backend
@@ -34,14 +35,31 @@ const [weekDesign,rearrangeDesign] = useState([])
     /*   days.map((day)=>
         <td className="border px-4 pb-[1px]"><span><span className="text-[10px]">{getInitials(worker)}</span><span className="flex">{timing.map((time)=>(<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">{time}</span>))}</span></span></td>)
                 */
-  let design1 = (<span>1</span>)//Monday to sunday of this week
-  let design2 = (<span>2</span>)
-  let design3 = (<span>3</span>)
-  let design4 = (<span>4</span>)
-  let design5 = (<span>5</span>)
-  let design6 = (<span>6</span>)
-  let design7 = (<span>7</span>)
-  let design8 = (<span>8</span>)
+
+        let daysNum = [1,2,3,4,5,6,7]
+        let m = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">05:00- Morning Shift -11:30</span>)
+        let ae = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">10:30- Afternoon Shift -17:00</span>
+                  <span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">17:00- Evening Shift -23:00</span>)
+        let e = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">17:00- Evening Shift -23:30</span>)
+        let n = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">23:00- Night Shift -05:30</span>)
+        
+  let design1 = (<>{daysNum.map((day)=>
+      <Day worker={n1}  m={m} a={ae} e={e} n={n}/>
+    )}</>)//Monday to sunday of this week
+
+  let design2 = (<>2</>)
+
+  let design3 = (<>3</>)
+
+  let design4 = (<>4</>)
+
+  let design5 = (<>5</>)
+
+  let design6 = (<>6</>)
+
+  let design7 = (<>7</>)
+
+  let design8 = (<>8</>)
       // weekDesign = [8,1,2,3,4,5,6,7]
   let design =  [design1,design2,design3,design4,design5,design6,design7,design8,]
   let designArranged = []
@@ -55,13 +73,12 @@ const [weekDesign,rearrangeDesign] = useState([])
     weekArrangement = weekArrangements[weekNUM-1];
       rearrangeDesign(weekArrangement) }
 
-let timing = ["07:00","07:30","08:00","8:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","22:30- Night Shit -07:30",]
 let weeks = [1,2,3,4,5,6,7,8]
 let workers = [1,2,3,4,5,6,7,8]
 let days = ["Monday","Tuesday","Wesnesday","Thursday","Friday","Saturday","sunday"]
-function getInitials(name) {
-  return name?.split(' ').map(word => word.charAt(0)).join('');
-}
+// function getInitials(name) {
+//   return name?.split(' ').map(word => word.charAt(0)).join('');
+// }
   return (
     <div className="px-2 pt-3 sm:px-10 sm:pt-10">
         <div className="flex flex-wrap items-center text-center">
@@ -127,7 +144,7 @@ function getInitials(name) {
             </thead>
             <tbody>
               {workersNams.map((worker)=>
-            (<tr className="hover:bg-gray-100 border-2 border-gray-300">
+            (<tr className="hover:bg-gray-100 border-2 border-gray-300 ">
                 <td className="border px-4 py-1 whitespace-nowrap">{worker}</td>
                 {designArranged[workersNams.indexOf(worker)]}
               </tr> )
