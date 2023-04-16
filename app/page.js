@@ -38,8 +38,8 @@ const [weekDesign,rearrangeDesign] = useState([])
 
         let daysNum = [1,2,3,4,5,6,7]
         let m = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">05:00- Morning Shift -11:30</span>)
-        let ae = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">10:30- Afternoon Shift -17:00</span>
-                  <span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">17:00- Evening Shift -23:00</span>)
+        let ae = (<><span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">10:30- Afternoon Shift -17:00</span>
+                  <span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">17:00- Evening Shift -23:00</span></>)
         let e = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">17:00- Evening Shift -23:30</span>)
         let n = (<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">23:00- Night Shift -05:30</span>)
         
