@@ -1,12 +1,13 @@
 "use client"
 
 import {useState} from "react"
+import useLocalStorage from 'use-local-storage'
 import Day from "../components/Day.js"
 import Shift from "../components/Shift.js"
 
 function HomePage() {
-  //worker name state, local host can be used or a backend
-const [workerName,setWorkerName]  = useState({wN:"",name:["Worker 1","Worker 2","Worker 3","Worker 4","Worker 5","Worker 6","Worker 7","Worker 8"]})
+  //worker name state, local host can be used or a backend//useLocalStorage from 'use-local-storage
+const [workerName,setWorkerName]  = useLocalStorage('workers',{wN:"",name:["Worker 1","Worker 2","Worker 3","Worker 4","Worker 5","Worker 6","Worker 7","Worker 8"]})
 const [weekDesign,rearrangeDesign] = useState([1,2,3,4,5,6,7,8])
 const [weekSelected,selectWeek] = useState([true,false,false,false,false,false,false,false])
 
