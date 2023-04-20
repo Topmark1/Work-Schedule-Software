@@ -128,7 +128,12 @@ let days = ["Monday","Tuesday","Wesnesday","Thursday","Friday","Saturday","sunda
             <div className="flex flex-col items-center lg:items-end  text-center">
 
               {/* Workers name */}
-              <div className='flex mb-1 mr-4'>
+              <div className='sm:flex mb-1 mr-4'>
+                <div className="flex sm:space-x-1 text-[12px] mb-2">
+                  <div className="flex"><span className="w-4 h-4 mr-[2px] bg-green-500"></span><p>Active</p></div>
+                  <div className="flex"><span className="w-4 h-4 mr-[2px] bg-gray-400"></span><p>Stand By</p></div>
+                  <div className="flex"><span className="w-4 h-4 mr-[2px] bg-blue-200"></span><p>Break</p></div>
+                </div>
               <form
           className=""
           onSubmit={(e) => {
