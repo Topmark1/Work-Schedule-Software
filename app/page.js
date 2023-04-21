@@ -122,7 +122,7 @@ let workers = [1,2,3,4,5,6,7,8]
 let days = ["Monday","Tuesday","Wesnesday","Thursday","Friday","Saturday","sunday"]
  
   return (
-    <div className="px-2 pt-3 sm:px-10 sm:pt-10 font-Sa">
+    <div className="px-2 pt-3 sm:px-10 sm:pt-10 font-CD">
         <div className="flex flex-wrap items-center text-center">
             <h1 className="text-4xl font-CD font-black mb-4">Workers  Schedule</h1>
             <div className="flex flex-col items-center lg:items-end  text-center">

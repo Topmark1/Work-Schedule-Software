@@ -7,7 +7,7 @@ function Day({worker,dayArrangment}){ //debug worker
     // {timing.map((time)=>(<span className="text-[9px] whitespace-nowrap bg-green-300 py-1 pr-1">{time}</span>))}
   return (
     <>
-      <td className="border px-4 pb-[1px] ">
+      <td className="border px-4 pb-[1px] font-Sa">
         <span className=''>
             <span className="text-[10px]">{getInitials(worker)}</span>
             <span className="flex">{dayArrangment}</span>
