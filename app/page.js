@@ -40,8 +40,8 @@ const [weekSelected,selectWeek] = useState([true,false,false,false,false,false,f
         let aet = '17:00- Evening -23:00'
         let et = '17:00- Evening -23:30'
         let nt = '23:00- Night -05:30'
-        let ca = 'bg-green-500'
-        let cs = 'bg-gray-400'
+        let ca = 'bg-green-600'
+        let cs = 'bg-gray-500'
         let f = 'font-normal'
 
         //all possible arrangement code
